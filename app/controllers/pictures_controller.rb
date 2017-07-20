@@ -12,6 +12,10 @@ class PicturesController < ApplicationController
   end
 
   def show
+    # Here are the Parameters: {"an_id"=> "5"}
+    
+    @pic = Photo.find(params["an_id"])
+    
     render("pic_templates/show.html.erb")
   end
 
