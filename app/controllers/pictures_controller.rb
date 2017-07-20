@@ -8,6 +8,9 @@ class PicturesController < ApplicationController
   end
 
   def index
+    
+    @pic = Photo.all
+    
     render("pic_templates/index.html.erb")
   end
 
